@@ -9,8 +9,6 @@ soup = BeautifulSoup(html, 'html.parser')
 
 pattern_elements = soup.find_all('code', class_="ramp")
 
-# print(pattern_elements)
-
 new_url = ""
 
 for child in pattern_elements:
@@ -21,6 +19,5 @@ for child in pattern_elements:
             i = span.find('i', class_="ramp char")
             if i:
                 new_url += i.get("value")
-
 
 print(new_url)
